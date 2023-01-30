@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravarando</title>
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/home.svg" type="image/x-icon">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="bfff265b-df3e-41be-90cf-64c5fb50ea88"
+        data-blockingmode="auto" type="text/javascript"></script>
+</head>
+
+<body onload="render()">
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/home.svg" alt="logo">
+                <h2>Ravarando</h2>
+            </a>
+        </div>
+        <div class="title">
+            <h2>Speisekarte</h2>
+        </div>
+        <div class="desktop"></div>
+    </div>
+
+    <div id="sideBox" class="sideBox desktop">
+        <div id="shoppingcartTitle" class="shoppingcartTitle">
+            <h2>Warenkorb</h2>
+            <div class="backButton mobile">
+                <img onclick="mobileCloseShoppingcart()" src="./img/arrow_back.svg" alt="zurück">
+            </div>
+        </div>
+        <div id="shoppingcart" class="shoppingcart"></div>
+
+        <div id="costs" class="costs">
+            <table>
+                <tr>
+                    <td>Zwischensumme</td>
+                    <td class="price" id="subTotal"></td>
+                </tr>
+                <tr>
+                    <td>Lieferkosten</td>
+                    <td class="price" id="deliveryPrice"></td>
+                </tr>
+                <tr>
+                    <td><b>Gesamt</b></td>
+                    <td class="price" id="total"></td>
+                </tr>
+            </table>
+            <div class="payButton">
+                <a id="payButton" onclick="order()" href="#"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="titleImage">
+        <div>
+            <img src="./img/pizza.jpg" alt="pizza">
+        </div>
+    </div>
+
+    <div class="boxContainer mobileBox boxShadow">
+        <div class="boxInnerContainer">
+            <div class="businessName">
+                <h2>PizzaPalast</h2>
+                <div class="businessNameButtons">
+                    <img onclick="noFunction()" src="./img/info.svg" alt="info">
+                    <img onclick="noFunction()" src="./img/hearth.svg" alt="herz">
+                </div>
+            </div>
+            <div class="reviews">
+                <img src="./img/star.svg" alt="Herz">
+                <img src="./img/star.svg" alt="Herz">
+                <img src="./img/star.svg" alt="Herz">
+                <img src="./img/star.svg" alt="Herz">
+                <img src="./img/star.svg" alt="Herz">
+                <a onclick="noFunction()" href="#">162 Bewertungen</a>
+            </div>
+            <div class="miniInfo">
+                <div class="center">
+                    <img src="./img/time.svg" alt="Uhr">
+                    <span>20 - 30 min</span>
+                </div>
+                <div class="center">
+                    <img src="./img/bike.svg" alt="Fahrrad">
+                    <span>1,00 €</span>
+                </div>
+                <div class="center">
+                    <img src="./img/bag.svg" alt="Tasche">
+                    <span>Min. 19,99 €</span>
+                </div>
+            </div>
+            <div id="searchbarBox" class="searchbarBox">
+                <div id="barBox" class="bar">
+                    <img onclick="noFunction()" src="./img/search.svg" alt="Lupe">
+                    <div class="bar">
+                        <div class="buttonleft">
+                            <img onclick="back()" src="./img/arrow_back.svg" alt="button left">
+                        </div>
+                        <div id="bar" class="searchbar">
+                            <a href="#popular">Beliebt</a>
+                            <a href="#forKids">Menüs für Kinder</a>
+                            <a href="#salad">Salate</a>
+                            <a href="#pizza">Pizza</a>
+                            <a href="#pasta">Pasta</a>
+                            <a href="#burger">Burger</a>
+                            <a href="#cutlet">Schnitzel</a>
+                            <a href="#casseroles">Aufläufe</a>
+                            <a href="#pizzaRolls">Pizza Rolls</a>
+                            <a href="#pizzaBun">Pizzabrötchen und Snacks</a>
+                            <a href="#croques">Croques</a>
+                            <a href="#fingerfood">Fingerfood</a>
+                            <a href="#desserts">Desserts</a>
+                            <a href="#toDrink">Getränke</a>
+                        </div>
+                        <div class="buttonright">
+                            <img onclick="forward()" src="./img/arrow_forward.svg" alt="button right">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boxContainer">
+        <div class="boxInnerContainer">
+            <h2 id="popular">Beliebt</h2>
+            <div id="popularList" class="popular">
+            </div>
+            <div id="forKids" class="placeholder">
+                <img src="./img/kidsmenu.jpg" alt="kidsmenu">
+            </div>
+            <div id="forKidsList">
+                <h2>Menüs für Kinder</h2>
+            </div>
+            <div id="salad" class="placeholder">
+                <img src="./img/salad.jpg" alt="salad">
+            </div>
+            <h2>Salate</h2>
+            <div id="saladList">
+
+            </div>
+            <div id="pizza" class="placeholder">
+                <img src="./img/pizza.jpg" alt="Pizza">
+            </div>
+            <h2>Pizza</h2>
+            <div id="pizzaList">
+
+            </div>
+            <div id="pasta" class="placeholder">
+                <img src="./img/pasta.jpg" alt="Pasta">
+            </div>
+            <h2>Pasta</h2>
+            <div id="pastaList">
+
+            </div>
+            <div id="burger" class="placeholder">
+                <img src="./img/burger.jpg" alt="Burger">
+            </div>
+            <h2>Burger</h2>
+            <div id="burgerList">
+
+            </div>
+            <div id="cutlet" class="placeholder">
+                <img src="./img/cutlet.jpg" alt="Cutlet">
+            </div>
+            <h2>Schnitzel</h2>
+            <div id="cutletList">
+
+            </div>
+            <div id="casseroles" class="placeholder">
+                <img src="./img/casseroles.jpg" alt="casseroles">
+            </div>
+            <h2>Aufläufe</h2>
+            <div id="casserolesList">
+
+            </div>
+            <div id="pizzaRolls" class="placeholder">
+                <img src="./img/pizzaRolls.jpg" alt="pizzaRolls">
+            </div>
+            <h2>Pizza Rolls</h2>
+            <div id="pizzaRollsList">
+
+            </div>
+            <div id="pizzaBun" class="placeholder">
+                <img src="./img/pizzaBun.jpg" alt="pizzaBun">
+            </div>
+            <h2>Pizza Brötchen & Snacks</h2>
+            <div id="pizzaBunList">
+
+            </div>
+            <div id="croques" class="placeholder">
+                <img src="./img/croques.jpg" alt="croques">
+            </div>
+            <h2>Croques</h2>
+            <div id="croquesList">
+
+            </div>
+            <div id="fingerfood" class="placeholder">
+                <img src="./img/fingerfood.jpg" alt="fingerfood">
+            </div>
+            <h2>Fingerfood</h2>
+            <div id="fingerfoodList">
+
+            </div>
+            <div id="desserts" class="placeholder">
+                <img src="./img/desserts.jpg" alt="desserts">
+            </div>
+            <h2>Desserts</h2>
+            <div id="dessertsList">
+
+            </div>
+            <div id="toDrink" class="placeholder">
+                <img src="./img/toDrink.jpg" alt="toDrink">
+            </div>
+            <h2>Getränke</h2>
+            <div id="toDrinkList">
+
+            </div>
+
+
+        </div>
+    </div>
+    <div id="shoppingcartButtonDiv" class="mobileShoppingcart mobile displayNone">
+        <div class="payButton shoppingcartButton">
+            <a id="shoppingcartButton" onclick="mobileOpenShoppingcart()">Warenkorb</a>
+        </div>
+    </div>
+</body>
+
+</html>

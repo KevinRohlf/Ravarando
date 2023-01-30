@@ -1,0 +1,493 @@
+@font-face { 
+    font-family: "OpenSans"; 
+    src: url("./font/OpenSans-VariableFont_wdth\,wght.ttf"); 
+    }
+
+body{
+    margin: 0;
+    font-family: 'OpenSans';
+    color: #0A3847;
+    scroll-behavior: smooth;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+.mobile {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 0px 3px 2px rgba(0,0,0,0.2);
+    z-index: 5;
+    background-color: #ffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FF8000;
+}
+
+.logo img {
+    height: 48px;
+}
+
+.sideBox {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20vw;
+    min-width: 344px;
+    background-color: #ffff;
+    box-shadow: -2px 0px 3px 2px rgba(0,0,0,0.2);
+    z-index: 4;
+}
+
+.shoppingcartTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+
+.shoppingcart {
+    overflow-y: scroll;
+    max-height: 60vh;
+    margin-bottom: 20px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.noMaginTop {
+    margin-top: unset;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.menu table {
+    width: 100%;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 70px;
+}
+
+.underline {
+    text-decoration: underline #0A3847;
+
+}
+
+.menuDescription {
+    font-size: 14px;
+}
+
+.menuButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.menuButtons img {
+    width: 25px;
+    padding: 10px;
+    background-color: #F5F3F1;
+    border-radius: 100%;
+    transition: all ease-in-out 185ms;
+}
+
+.menuButtons img:hover {
+    background-color: #EBE9E8;
+    transition: all ease-in-out 185ms;
+    cursor: pointer;
+}
+
+.costs {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.costs table{
+    width: 100%;
+}
+
+.payButton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;    
+}
+
+.payButton a{
+    text-decoration: none;
+    padding: 15px;
+    background-color: #F36805;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: all ease-in-out 185ms;
+}
+
+.payButton a:hover {
+    background-color: #F15D00;
+    transition: all ease-in-out 185ms;
+}
+
+.emptyShoppingcart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.boxContainer {
+    width: 80%;
+    max-width: calc(100vw - 344px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxShadow {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.1);
+}
+
+.titleImage {
+    margin-top: 75px;
+    width: 80%;
+    max-width: calc(100vw - 344px);
+}
+
+.titleImage img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.boxInnerContainer {
+    width: 50vw;
+}
+
+.businessName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.businessNameButtons {
+    display: flex;
+    gap: 10px;    
+}
+.businessNameButtons img{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    background-color: #F5F3F1;
+    border-radius: 100%;
+    transition: all ease-in-out 185ms;
+}
+
+.businessNameButtons img:hover {
+    background-color: #EBE9E8;
+    transition: all ease-in-out 185ms;
+}
+
+.reviews {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+.reviews a {
+    color: black;
+}
+
+.reviews img{
+    width: 25px;
+    
+}
+
+.miniInfo {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.miniInfo img {
+    width: 20px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+}
+
+.searchbarBox {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.searchbarBox img:first-child {
+    height: 25px;
+    padding: 5px;
+    background-color: #F5F3F1;
+    border-radius: 100%;
+    transition: all ease-in-out 185ms;
+}
+
+.searchbarBox img:hover {
+    background-color: #EBE9E8;
+    transition: all ease-in-out 185ms;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.searchbarBoxFixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    max-width: calc(100vw - 344px);
+    background-color: #FFFFFF;
+    z-index: 2;
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.1);
+    justify-content: center;
+}
+
+
+.bar {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+}
+
+.bar a{
+    white-space: nowrap;
+    text-decoration: none;
+    color: #303D3F;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    transition: all ease-in-out 185ms;
+}
+
+.bar a:hover {
+    background-color: #F5F5F5;
+    border-radius: 30px;
+    transition: all ease-in-out 185ms;
+}
+
+.barFixed {
+    width: 50%;
+}
+
+.buttonleft {
+    background-color: #F5F3F1;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.buttonleft img {
+    background-color: unset !important;
+}
+
+.buttonright {
+    background-color: #F5F3F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+}
+
+.buttonright img {
+    background-color: unset !important;
+}
+
+.menuCard {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.menuCard:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.menuCard img {
+    width: 30px;
+    padding: 5px;
+    background-color: #F5F3F1;
+    border-radius: 100%;
+}
+
+.menuCard h2{
+    margin: 0;
+}
+
+.menuCard p {
+    font-size: 14px;
+    margin-bottom: unset;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    height: 152px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media(max-width: 1000px) {
+
+    .logo {
+        margin-left: unset;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .sideBox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: 99;
+        
+    }
+
+    .titleImage {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .titleImage img {
+        width: 100vw;
+        height: 150px;
+        max-width: unset;
+    }
+
+    .boxContainer {
+        width: 100vw;
+        max-width: 100%;
+    }
+
+    .boxInnerContainer {
+        width: 90vw;
+    }
+
+    .searchbarBoxFixed {
+        max-width: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .barFixed {
+        width: 80vw;
+    }
+
+    .placeholder img {
+        height: 100px;
+    }
+
+    .mobile {
+        display: unset;
+    }
+
+    .mobileShoppingcart {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 80px;
+        
+    }
+    
+    .shoppingcartTitle {
+        margin-top: unset;
+    }
+
+    .shoppingcartButton {
+        width: 100%;
+    }
+
+    .desktop {
+        display: none;
+    }
+    .backButton {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        height: 35px;
+        width: 35px;
+        justify-content: center;
+        align-items: center;
+        background-color: #F5F3F1;
+        border-radius: 100%;
+    }
+
+    .backButton img {
+        height: 30px;
+    }
+}
